@@ -1,0 +1,12 @@
+# Dagster
+
+## Tutorial content
+
+| Official Tutorial doc                                                                                                                                                                  | Script                                                                                                                                                                       |
+| -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [Hello, world!](https://docs.dagster.io/latest/tutorial/)                                                                                                                              | [hello_cereal.py](hello_cereal.py)                                                                                                                                           |
+| [Serial pipeline](https://docs.dagster.io/latest/tutorial/hello_dag/)                                                                                                                  | [serial_pipeline.py](serial_pipeline.py) <br> [complex_pipeline.py](complex_pipeline.py)                                                                                     |
+| [Parametrizing solids with config](https://docs.dagster.io/latest/tutorial/config/)                                                                                                    | [config.py](config.py)                                                                                                                                                       |
+| [Parametrizing solids with inputs](https://docs.dagster.io/latest/tutorial/inputs/) <br> [Using the Dagit config editor](https://docs.dagster.io/latest/tutorial/dagit_config_editor/) | [inputs.py](inputs.py) <br> [test_inputs.py](test_inputs.py)                                                                                                                 |
+| [User-defined types](https://docs.dagster.io/latest/tutorial/types/)                                                                                                                   | [custom_types.py](custom_types.py) <br> [custom_types_2.py](custom_types_2.py) <br> [custom_types_3.py](custom_types_3.py) <br> [custom_types_test.py](custom_types_test.py) |
+
