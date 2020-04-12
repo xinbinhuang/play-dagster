@@ -1,0 +1,19 @@
+[tool.poetry]
+name = "test-dagster"
+version = "0.1.0"
+description = ""
+authors = ["Xinbin Huang <bin.huangxb@gmail.com>"]
+
+[tool.poetry.dependencies]
+python = "^3.7"
+dagster = "^0.7.2"
+dagit = "^0.7.2"
+
+[tool.poetry.dev-dependencies]
+flake8 = "^3.7.9"
+pytest = "^5.3.5"
+black = "^19.10b0"
+
+[build-system]
+requires = ["poetry>=1.0.0"]
+build-backend = "poetry.masonry.api"
