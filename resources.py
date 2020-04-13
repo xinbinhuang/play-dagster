@@ -10,6 +10,7 @@ from dagster import (
     pipeline,
     resource,
     solid,
+    composite_solid
 )
 
 
@@ -54,7 +55,7 @@ def read_csv(context, csv_path):
     return lines
 
 
-@solid(required_resource_keys={'warehouse'})
+@solid
 def normalize_calories(context, cereals):
     columns_to_normalize = [
         'calories',
@@ -76,8 +77,19 @@ def normalize_calories(context, cereals):
         cereal = normalized_cereals[idx]
         for column in columns_to_normalize:
             cereal[column] = float(cereal[column]) * reweights[idx]
+    return normalized_cereals
 
-    context.resources.warehouse.update_normalized_cereals(normalized_cereals)
+
+@solid(required_resource_keys={'warehouse'})
+def load_cereals(context, cereals):
+    context.resources.warehouse.update_normalized_cereals(cereals)
+
+
+@composite_solid
+def load_normalized_cereals():
+    cereals = read_csv()
+    normalized_cereals = normalize_calories(cereals)
+    load_cereals(normalized_cereals)
 
 
 @pipeline(
@@ -88,7 +100,7 @@ def normalize_calories(context, cereals):
     ]
 )
 def resources_pipeline():
-    normalize_calories(read_csv())
+    load_normalized_cereals()
 
 
 if __name__ == '__main__':
