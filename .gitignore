@@ -134,3 +134,6 @@ dmypy.json
 # Dagster
 .dagster_storage
 output
+history
+schedules
+storage
