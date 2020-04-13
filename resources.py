@@ -94,7 +94,7 @@ def resources_pipeline():
 if __name__ == '__main__':
     environment_dict = {
         'solids': {
-            'read_csv': {'inputs': {'csv_path': {'value': 'cereal.csv'}}}
+            'read_csv': {'inputs': {'csv_path': {'value': './data/cereal.csv'}}}
         },
         'resources': {'warehouse': {'config': {'conn_str': ':memory:'}}},
     }
