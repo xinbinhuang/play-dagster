@@ -6,8 +6,8 @@ authors = ["Xinbin Huang <bin.huangxb@gmail.com>"]
 
 [tool.poetry.dependencies]
 python = "^3.7"
-dagster = "^0.7.2"
-dagit = "^0.7.2"
+dagster = "*"
+dagit = "*"
 
 [tool.poetry.dev-dependencies]
 flake8 = "^3.7.9"
