@@ -1,0 +1,12 @@
+solids:
+  sort_by_calories:
+    inputs:
+      cereals:
+        csv: "./data/cereal.csv"
+    outputs:
+      - result:
+          csv:
+            path: "sorted_cereals.csv"
+            sep: ";"
+          json:
+            path: "sorted_cereals.json"
