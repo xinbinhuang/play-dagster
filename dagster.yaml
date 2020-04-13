@@ -1,0 +1,3 @@
+scheduler:
+    module: dagster_cron.cron_scheduler
+    class: SystemCronScheduler

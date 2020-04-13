@@ -8,6 +8,7 @@ authors = ["Xinbin Huang <bin.huangxb@gmail.com>"]
 python = "^3.7"
 dagster = "*"
 dagit = "*"
+dagster-cron = "^0.7.6"
 
 [tool.poetry.dev-dependencies]
 flake8 = "^3.7.9"

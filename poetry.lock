@@ -209,6 +209,18 @@ docker = ["docker"]
 
 [[package]]
 category = "main"
+description = "A Dagster integration for cron"
+name = "dagster-cron"
+optional = false
+python-versions = "*"
+version = "0.7.6"
+
+[package.dependencies]
+dagster = "*"
+python-crontab = ">=2.3.8"
+
+[[package]]
+category = "main"
 description = "The GraphQL frontend to python dagster."
 name = "dagster-graphql"
 optional = false
@@ -826,6 +838,21 @@ testing = ["argcomplete", "hypothesis (>=3.56)", "mock", "nose", "requests", "xm
 
 [[package]]
 category = "main"
+description = "Python Crontab API"
+name = "python-crontab"
+optional = false
+python-versions = "*"
+version = "2.4.1"
+
+[package.dependencies]
+python-dateutil = "*"
+
+[package.extras]
+cron-description = ["cron-descriptor"]
+cron-schedule = ["croniter"]
+
+[[package]]
+category = "main"
 description = "Extensions to the standard Python datetime module"
 name = "python-dateutil"
 optional = false
@@ -1050,7 +1077,7 @@ docs = ["sphinx", "jaraco.packaging (>=3.2)", "rst.linker (>=1.9)"]
 testing = ["jaraco.itertools", "func-timeout"]
 
 [metadata]
-content-hash = "0ddde3916819f7b5403d050121e9781df303441ecbce55674d769c308413cf8e"
+content-hash = "c2c9a6955104ab79f838031b1d53f8ab57fad971a29a834e1187e01240ca6b06"
 python-versions = "^3.7"
 
 [metadata.files]
@@ -1142,6 +1169,10 @@ dagit = [
 dagster = [
     {file = "dagster-0.7.6-py3-none-any.whl", hash = "sha256:a75db7797686df221cc55fcae794ed417bed5806ee0e74b25067f30064afcfc4"},
     {file = "dagster-0.7.6.tar.gz", hash = "sha256:65593066bb369b7d88809502f55ce6d332074882268900be5b0144945ab98632"},
+]
+dagster-cron = [
+    {file = "dagster-cron-0.7.6.tar.gz", hash = "sha256:059d7f0952b79d4a050aef2ecfc64d0b2065065eb3d89009eab38db34f172c65"},
+    {file = "dagster_cron-0.7.6-py3-none-any.whl", hash = "sha256:eafefd07d6bc18ddfacf9bdde03c485e6d2277902fe39f0dfcd49e1bbc32938d"},
 ]
 dagster-graphql = [
     {file = "dagster-graphql-0.7.6.tar.gz", hash = "sha256:b95e447a161dcfff6f55594540b0ff8a02bf1fdab2b0242970a6246a6bcdc620"},
@@ -1416,6 +1447,9 @@ pyrsistent = [
 pytest = [
     {file = "pytest-5.4.1-py3-none-any.whl", hash = "sha256:0e5b30f5cb04e887b91b1ee519fa3d89049595f428c1db76e73bd7f17b09b172"},
     {file = "pytest-5.4.1.tar.gz", hash = "sha256:84dde37075b8805f3d1f392cc47e38a0e59518fb46a431cfdaf7cf1ce805f970"},
+]
+python-crontab = [
+    {file = "python-crontab-2.4.1.tar.gz", hash = "sha256:2366c7aa373118315de7c082401907bacd28e8b1e4e0a6d702334d17b89e71aa"},
 ]
 python-dateutil = [
     {file = "python-dateutil-2.8.1.tar.gz", hash = "sha256:73ebfe9dbf22e832286dafa60473e4cd239f8592f699aa5adaf10050e6e1823c"},
