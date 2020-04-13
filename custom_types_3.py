@@ -57,7 +57,9 @@ if __name__ == "__main__":
         custom_type_input_hydration_pipeline,
         {
             "solids": {
-                "sort_by_calories": {"inputs": {"cereals": {"csv": "./data/cereal.csv"}}}
+                "sort_by_calories": {
+                    "inputs": {"cereals": {"csv": "./data/cereal.csv"}}
+                }
             }
         },
     )
